@@ -1,0 +1,356 @@
+@import './normalize.css';
+
+html {
+  background: #000;
+    color: #fff;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+body {
+    margin: 0;
+  }
+  
+  header {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  h1 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    background-color: #eee;
+    padding: 5px;
+    justify-content: end;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  a {
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* bottom of the page */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+  }
+
+
+  #quote-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    /* row two column one empty */
+    grid-template-areas: 
+      "image quote"
+      "image cite";
+    grid-template-rows: 200px 100px;
+    justify-content: space-evenly; 
+
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.3;
+    grid-area: quote;
+    /* compacity */
+    opacity: 0.5;
+    /* Text in the center */
+    text-align: center;
+
+  }
+  
+.quote {
+    /* make the text bigger */
+    font-size: 1.5rem;
+
+  }
+
+  .quote::before {
+    content: open-quote;
+  }
+
+  .quote::after {
+    content: close-quote;
+  }
+  
+  cite {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: right;
+    grid-area: cite;
+  }
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    margin: 0 auto;
+    display: block;
+
+    grid-area: image;
+
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0;
+    justify-content: end;
+
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0;
+    /* make image next to h1 */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #111111;
+    
+}
+
+
+
+.about-text {
+  align-items: center;
+  color: #fdf2f2;
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 0;
+justify-content: center;
+max-width: 50ch;
+letter-spacing: 1px;
+line-height: 1.5;
+word-spacing: 1.5px;
+font-style: normal;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #d4d4d4;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 30ch;
+  letter-spacing: 1px;
+}
+
+.about-quote {
+
+  color: #dcd8d8;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 50ch;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* Style the form container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Style the form labels */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Style the form input fields */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Style the form submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the form header */
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (min-width: 600px) {
+  /* Style the form container as a box */
+  form {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 25rem;
+  }
+  
+  /* Style the form labels for the box */
+  label {
+
+    margin-bottom: 0.5rem;
+  }
+
+  /* Style the form input fields for the box */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.sub-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #quote-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "image"
+      "quote"
+      "cite";
+    grid-template-rows: 250px 100px 100px;
+
+  
+  }
+
+  cite {
+    font-size: 2rem;
+    /* move the text up */
+    margin-top: -50px;
+
+  }
+
+
+  header {
+    /* center */
+    justify-content: center;
+  }
+
+.title {
+    /* hide */
+    display: none;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
